@@ -19,6 +19,6 @@ export async function createPost(content: string, imageUrl: string) {
     return { success: true, post };
   } catch (error) {
     console.log("Failed to create post ", error);
-    
+    return { success: false, error: "Failed to create post" };
   }
 }
